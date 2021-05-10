@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic 8 Ball! | Geekwise JS Final Project - Daniel Sanchez</title>
-    <script src="./js/script.js"></script>
+
+    <script defer src="./js/main.js"></script>
+
     <link rel="stylesheet" href="./css/style.css">
 
+    <!-- *** Fonts *** -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet"> 
+    
 </head>
 <body>
     <section id="main-container">
@@ -15,10 +23,11 @@
         <h2>Ask a question and reveal your answer.</h2>
 
         <div id="content">
-            <div id="8ball">
-                <img src="./img/magic8ball_start.png" alt="Magic 8 ball image">
-            </div>
-            <button>Turn On</button>
+            
+            <img src="./img/magic8ball_start.png" alt="Magic 8 ball image">
+            
+            <button id="onButton">ON</button>
+            <button id="shakeButton">Shake!</button>
         </div>
     </section>
 
