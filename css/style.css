@@ -1,5 +1,5 @@
 html, body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'PT Sans', sans-serif;
     color: whitesmoke;
     
 }
@@ -129,6 +129,17 @@ h2 {
   }
 
   @media screen and (max-width: 375px) {
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin-top: 0px;
+    }
 
     #main-container {
         max-width: 355px;
