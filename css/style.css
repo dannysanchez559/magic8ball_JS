@@ -94,6 +94,11 @@ h2 {
 /***** RESPONSIVE LAYOUT *****/
   @media screen and (max-width: 414px) {
 
+    h2 {
+        margin: 0 10%;
+        text-align: center;
+    }
+
     #main-container {
         max-width: 375px;
         margin-bottom: 25%;
