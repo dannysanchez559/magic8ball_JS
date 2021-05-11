@@ -1,16 +1,11 @@
 // import {imgArray} from './ballList.js'; // does not work!
 
-let onSwitch = false;
 
+let onSwitch = false; // 8BALL IS SET TO OFF BY DEFAULT
 const onButton = document.querySelector('#onButton');
 const shakeButton = document.querySelector('#shakeButton');
-
-// DISABLE SHAKE BUTTON BY DEFAULT
-toggleShakeButton();
-
 let ballImage = document.querySelector('img');
 let randomInt;
-
 const imgArray = [
     "magic8ball_1.png",
     "magic8ball_2.png",
@@ -34,19 +29,18 @@ const imgArray = [
     "magic8ball_20.png"
 ];
 
+// DISABLE SHAKE BUTTON BY DEFAULT
+toggleShakeButton();
 
 
-// shakeButton to be automatically disabled unless onSwitch = true
-shakeButton.disabled = true;
-
-
-// on/off switch
+// ON / OFF BUTTON PRESS
 onButton.addEventListener('click', function() {
 
     // TURN ON 8 BALL
     if (onSwitch === false) {
         onSwitch = true;
         onButton.innerHTML = "OFF";
+        onButton.classList.add("turnOffButtonBg");
 
         // change 8ball image to show On mode
         ballImage.src = "./img/magic8ball_extra.png";
@@ -59,6 +53,7 @@ onButton.addEventListener('click', function() {
     } else if (onSwitch === true) {
         onSwitch = false;
         onButton.innerHTML = "ON";
+        onButton.classList.remove("turnOffButtonBg");
 
         // change 8ball img to show Off mode
         ballImage.src = "./img/magic8ball_start.png";
@@ -68,20 +63,40 @@ onButton.addEventListener('click', function() {
     };
 });
 
-// DISPLAY RANDOM ANSWER ONCE CLICKED
+
+// SHAKE BUTTON PRESS - HANDLE IMG SWAP AND ANIMATION
 shakeButton.addEventListener('click', function () {
+
+    // disable shake button as soon as it's clicked
+    toggleShakeButton();
+
+    
     let randomNum = getRandomNumber();
 
-    ballImage.src = "./img/" + imgArray[randomNum];
+    // Enable shake animation then stop after 0.700s
+    ballImage.classList.add("shakeBall");
+
+    let stopAnimate = setTimeout(function () {
+        ballImage.classList.remove("shakeBall");
+        ballImage.src = "./img/" + imgArray[randomNum];
+
+        // enable shakebutton after animation
+        toggleShakeButton();
+
+    }, 700);    
+
 });
+
 
 // Random img number
 function getRandomNumber() {
     return (Math.floor(Math.random() * imgArray.length));
 }
 
-// DISABLE SHAKE BUTTON
+
+// ENABLE/DISABLE SHAKE BUTTON
 function toggleShakeButton() {
     shakeButton.classList.toggle("buttonDisabled");
     shakeButton.disabled = !shakeButton.disabled;
+
 }
