@@ -73,7 +73,7 @@ shakeButton.addEventListener('click', function () {
     
     let randomNum = getRandomNumber();
 
-    // Enable shake animation then stop after 0.700s
+    // Enable shake animation then stop after 0.800s
     ballImage.classList.add("shakeBall");
 
     let stopAnimate = setTimeout(function () {
@@ -83,7 +83,7 @@ shakeButton.addEventListener('click', function () {
         // enable shakebutton after animation
         toggleShakeButton();
 
-    }, 700);    
+    }, 800);    
 
 });
 
