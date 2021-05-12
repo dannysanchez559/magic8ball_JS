@@ -17,7 +17,7 @@ toggleShakeButton();
 // ON / OFF BUTTON PRESS
 onButton.addEventListener('click', function() {
 
-    // TURN OFF 8 BALL
+    // TURN OFF 8 BALL BEHAVIOR
     if (onSwitch) {
         // play sound off audio
         play("off");
@@ -28,7 +28,7 @@ onButton.addEventListener('click', function() {
         // change 8ball image to show On mode
         ballImage.src = picNameStart + "start.png";
 
-        // TURN ON 8 BALL
+        // TURN ON 8 BALL BEHAVIOR
     } else {
         // play sound on audio
         play("on");
@@ -47,6 +47,9 @@ onButton.addEventListener('click', function() {
 shakeButton.addEventListener('click', function () {
     // play shake audio
     play("shake");
+
+    // temporarily show blank answer while ball is being shaken
+    ballImage.src = picNameStart + "extra.png";
 
     // disable shake button as soon as it's clicked
     toggleShakeButton();
