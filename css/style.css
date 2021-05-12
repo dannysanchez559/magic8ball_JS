@@ -85,7 +85,7 @@ h2 {
     background-color: #0C4485;
 }
 
-.buttonDisabled {
+.shakeButtonDisabled {
     color: grey !important;
     background-color: #002b5c !important;
     box-shadow: none !important;
