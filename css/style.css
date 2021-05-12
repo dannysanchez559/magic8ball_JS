@@ -1,13 +1,14 @@
 html, body {
     font-family: 'PT Sans', sans-serif;
     color: whitesmoke;
-    
+    min-height: 100%;
 }
 
 body {
-    background-image: linear-gradient(180deg, #53247C, #030126);
-    margin: 0;
-    padding: 0;
+    background-image: linear-gradient(180deg, #7b46a9, #302b65);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
 }
 
 h1 {
@@ -23,8 +24,8 @@ h2 {
 
 #main-container {
     max-width: 80%;
-    height: 90%;
-    margin: 5% auto;
+    height: auto;
+    margin: 0 auto 5% auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,34 +34,51 @@ h2 {
 #content {
     border: none;
     border-radius: 4em;
-    background-image: linear-gradient(0deg, #F6F6FF, #e1e0ed);
+    background-image: url("../img/8BALL_background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     margin: 30px auto;
     padding: 4%;
 }
 
-
 #content img {
-    width: 450px;
+    width: 425px;
 }
 
 #content #onButton, #content #shakeButton {
-    margin: 10px 30%;
+    margin: 5px 30%;
     height: 50px;
     border-radius: 15px;
     font-size: 25px;
     color: whitesmoke;
     border: none;
+    box-shadow: 0 3px 1px rgb(167, 166, 166);
 } 
 
+#content #onButton:hover, #content #shakeButton:hover {
+    cursor: pointer;
+}
+
 #content #onButton {
-    margin-top: 40px;
+    margin-top: 25px;
     background-color: #299604;
+}
+
+#content #onButton:active {
+    box-shadow: none;
+    background-color: #207604;
+    transform: translateY(3px);
 }
 
 .turnOffButtonBg {
     background-color: rgb(242, 19, 19) !important;
+}
+
+.turnOffButtonBg:active {
+    background-color: rgb(193, 19, 19) !important;
+    transform: translateY(3px);
 }
 
 #content #shakeButton {
@@ -70,6 +88,9 @@ h2 {
 .buttonDisabled {
     color: grey !important;
     background-color: #002b5c !important;
+    box-shadow: none !important;
+    transform: translateY(3px);
+    cursor: initial !important;
 }
 
 .shakeBall {
@@ -101,21 +122,23 @@ h2 {
 
     #main-container {
         max-width: 375px;
-        margin-bottom: 25%;
+        margin-bottom: 16%;
     }
+
     #content {
         margin: 0;
         margin-top: 10%;
         max-width: 100%;
         border-radius: 2em;
     }
+
     #content img {
         margin-top: 10%;
         width: 350px;
     }
 
     #content #onButton, #content #shakeButton {
-        margin: 10px 8%;
+        margin: 5px 8%;
         height: 60px;
         border-radius: 15px;
         font-size: 25px;
@@ -148,11 +171,13 @@ h2 {
 
     #main-container {
         max-width: 355px;
-        margin-bottom: 25%;
+        margin-bottom: 10%;
     }
+
     #content {
         max-width: 100%;
     }
+
     #content img {
         width: 325px;
     }
