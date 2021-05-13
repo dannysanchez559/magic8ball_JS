@@ -115,19 +115,23 @@ h2 {
 /***** RESPONSIVE LAYOUT *****/
   @media screen and (max-width: 414px) {
 
+    h1 {
+        display: none;
+    }
+
     h2 {
-        margin: 0 10%;
+        margin: 0 5%;
         text-align: center;
     }
 
     #main-container {
         max-width: 375px;
-        margin-bottom: 16%;
+        margin-bottom: 10%;
     }
 
     #content {
         margin: 0;
-        margin-top: 10%;
+        margin-top: 5%;
         max-width: 100%;
         border-radius: 2em;
     }
@@ -157,11 +161,6 @@ h2 {
   }
 
   @media screen and (max-width: 375px) {
-
-    h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
     
     h2 {
         font-size: 1.5em;
@@ -171,10 +170,12 @@ h2 {
 
     #main-container {
         max-width: 355px;
-        margin-bottom: 10%;
+        margin-bottom: 0;
     }
 
     #content {
+        margin-top: 10px;
+        margin-bottom: 0;
         max-width: 100%;
     }
 
@@ -183,3 +184,13 @@ h2 {
     }
 
   }
+
+  @media screen and (min-height: 810px) and (max-width: 375px) {
+
+    h2 {
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
+  }
+
