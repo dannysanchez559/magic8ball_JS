@@ -15,7 +15,7 @@
     ],
     "start_url": "/magic8ball_JS/?source=pwa",
     "background_color": "#7b46a9",
-    "display": "standalone",
+    "display": "fullscreen",
     "scope": "/magic8ball_JS/",
     "theme_color": "#7b46a9",
     "description": "Ask a question and receive an answer."
